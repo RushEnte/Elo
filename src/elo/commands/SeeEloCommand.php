@@ -28,7 +28,7 @@ class SeeEloCommand extends PluginCommand
             if(isset($args[0])) {
                 $name = $args[0];
                 $elo = $this->main->getElo($name);
-                $sender->sendMessage(Elo::prefix.TF::YELLOW.$name." has ".$elo." Elo.");
+                $sender->sendMessage(Elo::prefix.TF::YELLOW.$name." hat ".$elo." Elo.");
             }
         }
     }

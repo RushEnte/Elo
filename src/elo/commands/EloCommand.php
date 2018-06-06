@@ -18,13 +18,13 @@ class EloCommand extends PluginCommand {
 		$this->setPermission("elo.command");
 	}
 
-	public function execute(CommandSender $sender, $currentAlias, array $args) {
+	public function execute(CommandSender $sender, $currentAlias, array $args): bool {
           if($this->testPermission($sender)){
              if($sender instanceof Player){
              $elo = $this->main->getElo($sender->getName());
-              $sender->sendMessage(Elo::prefix.TF::YELLOW."You have ".TF::BLUE.$elo.TF::YELLOW." Elo.");
+              $sender->sendMessage(Elo::prefix.TF::YELLOW."Du hast ".TF::BLUE.$elo.TF::YELLOW." Elo.");
        }else{
-       $sender->sendMessage(TF::RED."You must run this command in game!");
+       $sender->sendMessage(TF::RED."Der Command geht nur Ingame !");
     }
   }
  }

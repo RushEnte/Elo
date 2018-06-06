@@ -31,7 +31,7 @@ class AddEloCommand extends PluginCommand {
                  $lol = $args[1];
                   $elo = (int)$lol;
                    $this->main->addElo($name, $elo);
-                    $sender->sendMessage(Elo::prefix.TF::GREEN."Successfully added ".$elo." Elo to Player ".$name);
+                    $sender->sendMessage(Elo::prefix.TF::GREEN."Erfolgreich ".$elo." Elo zum Spieler geaddet ");
                 }
            }
        }
